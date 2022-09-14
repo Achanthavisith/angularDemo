@@ -100,8 +100,33 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "angular-demo:build:production",
+            "firebaseProject": "fir-demo-1af9a",
+            "firebaseHostingSite": "fir-demo-1af9a"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "d88929fc-602a-4111-b132-3fede0ceeb12",
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
